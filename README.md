@@ -2,7 +2,7 @@
 
 Create an aws HPC instance by using [terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
-### Prerequisite package install and Develop environmental Setup (Windows 10 Desktop)
+### Prerequisite Package and its environment Setup (Windows 10 Desktop)
 - Install Windows WSL2 & Ubuntu from Microsoft Store
 - Install awscli inside WSL
   - sudo apt install aws
