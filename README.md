@@ -2,10 +2,24 @@
 
 ### create HPC aws instance by using [terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
-### Usage:
-- **terraform init**
-- **terraform plan**
-- **terraform apply**
+### Prerequisite package install and Develop environmental Setup (Windows 10 Desktop)
+- Install Windows WSL2 & Ubuntu from Microsoft Store
+- Install awscli inside WSL
+  - sudo apt install aws
+- Install [terraform](https://www.terraform.io/downloads)
+  - download **terraform** linux binary and unzip it and move into /usr/local/bin
+ 
+### Reposity Usage:
+- Clone [this repositry](https://github.com/yjun-001/terraform_aws_instance.git)
+- following commands are availabe:
+    - **terraform init**
+    - **terraform plan**
+    - **terraform apply**
+      - one aws instance should be created by applying successfully
+    - **terraform destroy**
+
+### Code Action and its Output:
+#### terraform apply:
 ```bash
 >terraform apply
 aws_security_group.allow_ssh_sg: Refreshing state... [id=sg-02cfa9700f8bd8c9a]
@@ -165,7 +179,7 @@ Outputs:
 
 aws_hpc_instance = "18.222.105.68"
 ```
-- **ssh to aws hpc instance**
+- ####**ssh to the aws hpc instance**:
 ```bash
 >ssh -i ../../aws_hpc_keypair.pem  ubuntu@18.222.105.68
 Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-1019-aws x86_64)
@@ -217,9 +231,9 @@ tmpfs           484M     0  484M   0% /sys/fs/cgroup
 tmpfs            97M     0   97M   0% /run/user/1000
 ```
 
-- **terraform destory**
+- ####**terraform destory**:
 ```bash
-> terraform destroy
+>terraform destroy
 aws_security_group.allow_ssh_sg: Refreshing state... [id=sg-02cfa9700f8bd8c9a]
 aws_instance.aws_hpc_instance: Refreshing state... [id=i-085892a3ba0569d1d]
 
