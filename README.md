@@ -167,7 +167,7 @@ aws_hpc_instance = "18.222.105.68"
 ```
 - **ssh to aws hpc instance**
 ```bash
-ssh -i ../../aws_hpc_keypair.pem  ubuntu@18.222.105.68
+>ssh -i ../../aws_hpc_keypair.pem  ubuntu@18.222.105.68
 Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-1019-aws x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -218,8 +218,8 @@ tmpfs            97M     0   97M   0% /run/user/1000
 ```
 
 - **terraform destory**
-  ```bash
-   terraform destroy
+```bash
+> terraform destroy
 aws_security_group.allow_ssh_sg: Refreshing state... [id=sg-02cfa9700f8bd8c9a]
 aws_instance.aws_hpc_instance: Refreshing state... [id=i-085892a3ba0569d1d]
 
